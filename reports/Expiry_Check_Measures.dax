@@ -1,0 +1,11 @@
+﻿DEFINE 
+---- MODEL MEASURES BEGIN ----
+MEASURE fridgecontents[Expires in x Days] = DATEDIFF(TODAY(),Min(fridgecontents[expirydate]),DAY)
+MEASURE fridgecontents[Ingredients] = 
+CONCATENATEX (
+        All(fridgecontents[Product] ),
+        fridgecontents[Product],
+        ","
+    )
+---- MODEL MEASURES END ----
+
