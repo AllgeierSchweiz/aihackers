@@ -43,13 +43,73 @@ But our solution goes beyond mere inventory management. Leveraging the power of 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Setting up the Power Platform Solution
+Download and Import Solution:
 
-Install solution to power platform
+Begin by downloading the FoodFightersSLN solution file provided.
+Navigate to Power Apps and log in to your account.
+Locate the option to import a solution and upload the downloaded FoodFightersSLN file.
+Follow the on-screen prompts to complete the import process.
+Set Up Connections:
+
+After importing the solution, set up connections to external services as needed.
+These connections may include databases, APIs, or other systems required for the solution to function properly.
+Ensure that credentials are correctly configured.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Setting up fabric
+Create Fabric Enabled Workspace:
 
-upload notebooks, model and configure Reflex
+Navigate to https://app.powerbi.com and create a new fabric enabled workspace.
+
+Set Up First Lakehouse:
+
+Within the fabric enabled workspace, create a lakehouse to serve as a storage repository for imported data.
+
+Run Initial Load:
+
+Add the provided py_loadproducts notebook to the newly created lakehouse.
+Execute the notebook to start the initial data load process from Open Food Facts.
+This process populates the database with essential product information.
+
+Create Second Lakehouse:
+
+Similarly, within the fabric enabled workspace, establish another lakehouse dedicated to storing data related to the fridge inventory.
+
+Handle Fridge Inventory Data:
+
+Incorporate the py_addtofridge notebook into the second lakehouse environment.
+This notebook facilitates the processing and integration of incoming data from the fridge inventory application.
+
+Scan and Send Products:
+
+Begin utilizing the fridge inventory application to scan products and transmit relevant information to the designated lakehouse.
+
+Build Semantic Model:
+
+With the data successfully imported into the lakehouse, proceed to construct a semantic model.
+
+Calculate Expiry Dates:
+
+Within the semantic model, add a DAX expression to calculate the number of days remaining before each product's expiration.
+For example:Expires in x Days = DATEDIFF(TODAY(),Min(fridgecontents[expirydate]),DAY)
+
+Create Fridge Inventory Report:
+
+Set up a report within Power BI showcasing the current inventory of products along with their respective expiry dates.
+
+Activate Data Reflex:
+
+Enable data reflex functionality to automate responses based on predefined conditions within the inventory report.
+
+Create user defined action:
+
+Define an action within the reflex to initiate the getrecipe flow when your products are getting closer to their expiration date.
+
+Add Connection Details:
+
+Configure the connection details within the getrecipe flow with the information from your user definec action.
+Verify that authentication credentials and endpoint URLs are configured correctly.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## How to test
