@@ -30,7 +30,11 @@
 <!-- GETTING STARTED -->
 ## The Use Case
 
-don't wanna waste food
+Introducing our innovative Food Fighters solution aimed at combatting food waste: a seamless integration of Azure Open AI, Power Apps, Fabric Lakehouses, and Notebooks and much more. Our solution empowers users to effortlessly manage their food inventory, track expiration dates, and receive personalized recipe suggestions via email, all with the simple scan of a product.
+
+Imagine the convenience of scanning each item you purchase and instantly generating a comprehensive fridge inventory. With our solution, keeping track of expiration dates becomes a breeze, eliminating the frustration of discovering forgotten items wasting away at the back of the fridge.
+
+But our solution goes beyond mere inventory management. Leveraging the power of AI, it analyzes your inventory and proactively suggests delicious recipes tailored to the items nearing their expiration dates. Say goodbye to wasted food and hello to inspired culinary adventures!
 
 ## Architecture overview
 
