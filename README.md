@@ -51,9 +51,7 @@ Locate the option to import a solution and upload the downloaded FoodFightersSLN
 Follow the on-screen prompts to complete the import process.
 Set Up Connections:
 
-After importing the solution, set up connections to external services as needed.
-These connections may include databases, APIs, or other systems required for the solution to function properly.
-Ensure that credentials are correctly configured.
+After importing the solution, set up connections and sure that credentials are correctly configured.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Setting up fabric
