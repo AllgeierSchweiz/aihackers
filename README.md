@@ -49,9 +49,10 @@ Begin by downloading the [FoodFightersSLN solution file](https://github.com/Allg
 Navigate to Power Apps and log in to your account.
 Locate the option to import a solution and upload the downloaded FoodFightersSLN file.
 Follow the on-screen prompts to complete the import process.
+
 Set Up Connections:
 
-After importing the solution, set up connections and sure that credentials are correctly configured. 
+After importing the solution, set up connections and sure that credentials are correctly configured (Keyvault, Outlook, Reflex Trigger).  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Setting up fabric
