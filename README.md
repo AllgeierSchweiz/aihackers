@@ -59,38 +59,40 @@ After importing the solution, set up connections and sure that credentials are c
 Create Fabric Enabled Workspace:
 
 Navigate to https://app.powerbi.com and create a new fabric enabled workspace.
+![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/eb4b3f75-5d67-4eb8-9f11-ddedbd367889)
 
-Set Up First Lakehouse:
+Set Up A Lakehouse:
 
 Within the fabric enabled workspace, create a lakehouse to serve as a storage repository for imported data.
+![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/e16ed2f2-9967-4c64-bb27-f8a953f3d835)
 
 Run Initial Load:
 
 Add the provided py_loadproducts notebook to the newly created lakehouse.
 Execute the notebook to start the initial data load process from Open Food Facts.
 This process populates the database with essential product information.
-
-Create Second Lakehouse:
-
-Similarly, within the fabric enabled workspace, establish another lakehouse dedicated to storing data related to the fridge inventory.
+![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/09ceb4b0-9c66-40d0-8e0f-076936a49123)
 
 Handle Fridge Inventory Data:
 
-Incorporate the py_addtofridge notebook into the second lakehouse environment.
+Incorporate the py_addtofridge notebook into the lakehouse environment.
 This notebook facilitates the processing and integration of incoming data from the fridge inventory application.
 
 Scan and Send Products:
 
 Begin utilizing the fridge inventory application to scan products and transmit relevant information to the designated lakehouse.
+![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/0d12325a-eba3-4424-86f8-5f3ca21ef0b5)
 
 Build Semantic Model:
 
 With the data successfully imported into the lakehouse, proceed to construct a semantic model.
+![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/7a97dbdb-4744-4da9-abb4-0e699fdebf34)
 
 Calculate Expiry Dates:
 
 Within the semantic model, add a DAX expression to calculate the number of days remaining before each product's expiration.
 For example:Expires in x Days = DATEDIFF(TODAY(),Min(fridgecontents[expirydate]),DAY)
+![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/622b3ce5-ba22-4e1f-a80d-8deb1329732a)
 
 Create Fridge Inventory Report:
 
@@ -100,9 +102,12 @@ Activate Data Reflex:
 
 Set up Data Activator reflex to automate responses based on predefined conditions within the inventory report. Select the measure you created earlier in the reflex select section, set the amount of days you want to be informed before product expiration in the detect section and within the act section set the custom action that you will configure in the next step. 
 
+![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/d3ee00ef-2ccb-4c99-a382-d8705e7743a5)
+
 Create custom action:
 
 Define a custom action within the reflex to initiate the GetRecipeOpenAI_Flow when your products are getting closer to their expiration date. Copy paste the connection string for the action and add replace the current value for the Trigger action within that flow. 
+![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/c4c63202-c114-4be4-8b2e-4a4c1cae06d9)
 
 Add Connection Details:
 
