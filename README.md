@@ -51,7 +51,7 @@ Locate the option to import a solution and upload the downloaded FoodFightersSLN
 Follow the on-screen prompts to complete the import process.
 Set Up Connections:
 
-After importing the solution, set up connections and sure that credentials are correctly configured.
+After importing the solution, set up connections and sure that credentials are correctly configured. 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Setting up fabric
@@ -97,22 +97,26 @@ Set up a report within Power BI showcasing the current inventory of products alo
 
 Activate Data Reflex:
 
-Enable data reflex functionality to automate responses based on predefined conditions within the inventory report.
+Set up Data Activator reflex to automate responses based on predefined conditions within the inventory report. Select the measure you created earlier in the reflex select section, set the amount of days you want to be informed before product expiration in the detect section and within the act section set the custom action that you will configure in the next step. 
 
-Create user defined action:
+Create custom action:
 
-Define an action within the reflex to initiate the getrecipe flow when your products are getting closer to their expiration date.
+Define a custom action within the reflex to initiate the GetRecipeOpenAI_Flow when your products are getting closer to their expiration date. Copy paste the connection string for the action and add replace the current value for the Trigger action within that flow. 
 
 Add Connection Details:
 
-Configure the connection details within the getrecipe flow with the information from your user definec action.
-Verify that authentication credentials and endpoint URLs are configured correctly.
+If you haven't configured the connection reference details for the Food Fighter SLN yet you should now add keyvault credentials to the keyvault that holds your OpenAI api-key (if you have no keyvault configured yet you should set it up and add the api-key to it) and the connection to your outlook to send the recipe mail. 
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## How to test
 
-Whip out your mobile 
+After setting up the credentials as mentioned above the FoodFighter solution will be ready to use. Download the PowerApps App to your phone and open the FoodFighters App within PowerApps. Scan the barcode some food that you would like to add to your fridge. Select Log Product and wait a couple of minutes. You can now refresh Fridge Inventory lakehouse you created before and check the inventory table for the product you scanned.
+
+If the product is added to the inventory you can move to the reflex you created earlier and send a test alert. If configured correctly this will trigger the GetRecipeOpenAI_Flow that will now send 3 recipes to your email adress using the products you added to the Fridge Inventory lakehouse. 
+
+You are now ready to use the solution. Add all your products to your Fridge Invetory and let Food Fighters keep track of your products and supply you with great recipes you can enjoy!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
