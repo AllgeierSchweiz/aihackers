@@ -59,7 +59,8 @@ After importing the solution, set up connections and sure that credentials are c
 Create Fabric Enabled Workspace:
 
 Navigate to https://app.powerbi.com and create a new fabric enabled workspace.
-![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/eb4b3f75-5d67-4eb8-9f11-ddedbd367889)
+![image](https://github.com/AllgeierSchweiz/aihackers/assets/110177392/d339a1c5-4516-4519-8d4a-bd1538c11e58)
+
 
 Set Up A Lakehouse:
 
