@@ -52,7 +52,7 @@ But our solution goes beyond mere inventory management. Leveraging the power of 
 ## Setting up the Power Platform Solution
 Download and Import Solution:
 
-Begin by downloading the [FoodFightersSLN solution file](https://github.com/AllgeierSchweiz/aihackers/commit/f1da636b482e82445e25e543e268d11efa63debd) provided.
+Begin by downloading the [FoodFightersSLN solution file](https://github.com/AllgeierSchweiz/aihackers/raw/main/PowerApp/FoodFightersSLN_1_0_0_12.zip) provided.
 Navigate to Power Apps and log in to your account.
 Locate the option to import a solution and upload the downloaded FoodFightersSLN file.
 Follow the on-screen prompts to complete the import process.
