@@ -40,7 +40,14 @@ But our solution goes beyond mere inventory management. Leveraging the power of 
 
 <img src="images/Fabric_AI_Food_Waste_Architecture.jpg" width="1000"/>
 
+### Explainer Video:
+[![Foodwaste Hack Explainer Video](https://img.youtube.com/vi/hgCOdZzBuq4/0.jpg)](https://www.youtube.com/watch?v=hgCOdZzBuq4)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## End to End Setup walkthrough
+
+[![Foodwaste Hack walk through](https://img.youtube.com/vi/I6MvPD-cXrI/0.jpg)](https://www.youtube.com/watch?v=I6MvPD-cXrI)
 
 ## Setting up the Power Platform Solution
 Download and Import Solution:
